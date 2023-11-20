@@ -86,4 +86,40 @@ printf("%d",queue[i]);
 
 printf("\n....\n");}}}
 void search()
+{
+printf("enter the value to search");
+scanf("%d",&n);
+
+if (front==-1)
+{
+printf("queue underflow");
+}
+else{
+int front_pos=front,rear_pos=rear;
+if (front_pos>rear_pos)
+{
+while(front_pos>rear_pos){
+if(queue[front_pos]==n)
+{
+flag=1;
+break;}
+front_pos=(front_pos+1)%MAX;
+}
+}
+if(front_pos<=rear_pos)
+{
+for(i=front_pos;i<rear_pos;i++)
+{
+if(queue[i]==n)
+{
+flag=1;
+break;}}}}
+if(flag==1)
+{
+printf("element is found");
+}
+else{
+printf("element is not found");
+}}
+
 
