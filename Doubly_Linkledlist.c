@@ -174,4 +174,49 @@ temp=tail;
 printf("deleted node is:%d",temp->data);
 tail=tail->prev;
 if(tail==0)
+ {
+head==0;}
+else{
+tail->next=0;
+free(temp);
+size--;}}}
+void delete_pos(){
+struct node*temp;
+int pos,i=1;
+printf("enter the position");
+scanf("%d",&pos);
+if(pos<0||pos>size)
+{
+printf("invalid");
+}
+else if(pos==0)
+{
+delete_head();
+}
+else if(pos==size-1)
+{
+delete_end();
+}else{
+temp=head;
+while(i<pos){
+temp=temp->next;
+i++;
+}
+printf("\ndeleted node is:%d",temp->data);
+(temp->prev)->next=temp->next;
+(temp->next)->prev=temp->prev;
+free(temp);size--;
+}}
+void display()
+{
+struct node*temp;
+if(head==0){
+printf("\nlinked list is empty");}
+else{
+printf("\nlinked list is:\n");
+temp=head;
+while(temp!=0)
+{
+printf("%d",temp->data);
+                          
                                                                           
