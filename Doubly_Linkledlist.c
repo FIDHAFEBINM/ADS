@@ -218,5 +218,32 @@ temp=head;
 while(temp!=0)
 {
 printf("%d",temp->data);
-                          
+ temp=temp->next;}
+}
+}
+void search(){
+int element,count=1;
+struct node*temp;
+
+scanf("%d",&element);
+if(head==0){
+printf("\nthe link is empty");
+}
+else{
+printf("\nenter the value to search");
+scanf("%d",&element);
+temp=head;
+do{
+if(temp->data==element)
+{
+printf("\nthe element is found %d at position %d",temp->data,count);
+}
+count++;
+temp=temp->next;
+}
+while(temp!=0);
+printf("\nthe element is not found");
+}}
+
+                         
                                                                           
