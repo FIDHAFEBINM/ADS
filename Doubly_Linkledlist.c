@@ -86,4 +86,48 @@ int element;
 struct node*newnode;
 newnode=(struct node*)malloc(sizeof(struct node));
 printf("\nenter the element");
-                                               
+ scanf("%d",&element);
+newnode->data=element;
+newnode->next=0;
+newnode->prev=0;
+if(tail==0)
+{
+head=newnode;
+tail=newnode;
+}
+else{
+tail->next=newnode;
+newnode->prev=tail;
+tail=newnode;}
+size++;
+}
+void insert_pos()
+{
+struct node*newnode;
+struct node*temp;
+int i=1,element;
+int position;
+
+printf("\n enter the position");
+scanf("%d",&position);
+
+if(position<0 || position>size)
+{
+printf("position is invalid");
+}
+
+
+else if (position==0){
+printf("\nenter the element");
+scanf("%d",&element);
+
+insert_head();
+
+
+}
+else if(position==size)
+{printf("\nenter the element");
+scanf("%d",&element);
+
+insert_end();
+                                              
