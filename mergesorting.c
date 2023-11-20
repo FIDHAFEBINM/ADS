@@ -42,3 +42,23 @@ else
 c[k]=b[j];
 j++;
 k++;
+}}
+while(i<n)
+{
+c[k]=a[i];
+i++;
+k++;
+}
+while(j<n)
+{
+c[k]=b[j];
+j++;
+k++;
+}
+printf("the sorted array");
+for(k=0;k<s;k++)
+{
+printf("%d",c[k]);
+}
+}
+     
