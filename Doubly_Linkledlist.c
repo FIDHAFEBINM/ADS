@@ -42,4 +42,48 @@ display();
 break;
 case 8:
 search();
-               
+break;
+
+case 9:
+printf("exit");
+break;
+default:
+printf("not valid");
+}}while(choice!=9);
+}
+struct node
+{
+int data;
+struct node*next;
+struct node*prev;
+};
+struct node*head,*tail;
+
+static int size=0;
+void insert_head()
+{
+int element;
+struct node*newnode;
+newnode=(struct node*)malloc(sizeof(struct node));
+printf("\nenter the elememnt");
+scanf("%d",&element);
+newnode->data=element;
+newnode->next=0;
+newnode->prev=0;
+if(head==0)
+{
+head=tail=newnode;
+}
+else{
+head->prev=newnode;
+newnode->next=head;
+head=newnode;}
+size++;
+}
+void insert_end()
+{
+int element;
+struct node*newnode;
+newnode=(struct node*)malloc(sizeof(struct node));
+printf("\nenter the element");
+                                               
