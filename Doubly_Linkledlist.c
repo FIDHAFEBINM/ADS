@@ -130,4 +130,48 @@ else if(position==size)
 scanf("%d",&element);
 
 insert_end();
-                                              
+}
+else{
+printf("\nenter the element");
+scanf("%d",&element);
+temp=head;
+newnode=(struct node*)malloc(sizeof(struct node));
+newnode->data=element;
+while(i<position-1)
+{
+temp=temp->next;
+i++;
+}
+newnode->next=temp->next;
+temp->next=newnode;
+(temp->next)->prev=newnode;
+newnode->prev=temp;
+size++;}}
+void delete_head()
+{
+struct node*temp;
+if(head==0){
+printf("link is empty");}
+else{
+printf("\ndeleted node is:%d",temp->data);
+temp=head;
+head=head->next;
+if(head!=0)
+{
+head->prev=0;}
+else{
+tail=0;
+free(temp);
+size--;
+}}}
+void delete_end()
+{struct node*temp;
+if(tail==0){
+printf("linked list is empty");
+}
+else{
+temp=tail;
+printf("deleted node is:%d",temp->data);
+tail=tail->prev;
+if(tail==0)
+                                                                          
