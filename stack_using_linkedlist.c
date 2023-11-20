@@ -42,4 +42,41 @@ void push(int value)
 {
 struct node*newnode;
 newnode=(struct node*)malloc(sizeof(struct node));
-                                                           
+ newnode->data=value;
+newnode->next=top;
+top=newnode;
+}
+void pop()
+{
+struct node*temp;
+temp=top;
+if(top==0)
+{
+printf("underflow\n");
+}
+else{
+printf("top element is %d\n",top->data);
+top=top->next;
+free(temp);
+}}
+void display()
+{
+struct node*temp;
+temp=top;
+printf("the elements are");
+if(top==0)
+{
+printf("empty\n");
+}
+else{
+while(temp!=0)
+
+{
+
+printf("%d-->",temp->data);
+temp=temp->next;
+}}
+printf("Null\n");
+}
+
+                                                          
