@@ -41,4 +41,41 @@ while(choice!=4);
 }
 void push(int element)
 {
+if (top==MAX_SIZE-1)
+{
+printf("stack overflow");
+}
+else{
+stack[++top]=element;
+printf("%d pushed stack element",element);
+
+
+}}
+int pop()
+{
+
+if (top==-1){
+printf("stack underflow");
+return -1;
+}else
+{
+return stack[top];
+
+}}
+void display(){
+int i;
+if (top==-1)
+{
+printf("stack is empty");
+
+}else
+{
+printf("stack elements are");
+for(i=0;i<=top;i++){
+printf("%d",stack[i]);
+}printf("\n");
+}
+}
+
+
 
