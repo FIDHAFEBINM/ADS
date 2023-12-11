@@ -153,7 +153,7 @@ struct node*temp;
 if(head==0){
 printf("link is empty");}
 else{
-printf("\ndeleted node is:%d",temp->data);
+printf("\ndeleted node is:%d",head->data);
 temp=head;
 head=head->next;
 if(head!=0)
